@@ -15,9 +15,11 @@ public:
 	// Sets default values for this character's properties
 	ABaseGameCharacter();
 
+	
+
 protected:
 	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
+	virtual void BeginPlay() override
 
 public:	
 	// Called every frame
@@ -26,8 +28,7 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-/*	UFUNCTION(BlueprintImplementableEvent, Category = "BaseGameCharacter")
-		void TakeDamage (float Amount);*/
-	
-	
+	UFUNCTION(BlueprintImplementablEevent, Category = "BaseGameCharacter")
+		void DamageBaseGameCharacter(float Amount);
+
 };

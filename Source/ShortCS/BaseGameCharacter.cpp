@@ -32,9 +32,8 @@ void ABaseGameCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputC
 
 }
 
-/*void ABaseGameCharacter::TakeDamage(float Amount) 
-{
-	/*Overide me in Blueprint pls
-}*/
-
+//void ABaseGameCharacter::DamageBaseGameCharacter(float Amount)
+//{
+//	GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Green, TEXT("Took Damage!"), true);
+//}
 
