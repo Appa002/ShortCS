@@ -6,6 +6,7 @@
 #include "GameFramework/Actor.h"
 #include "Camera/CameraComponent.h"
 #include "BaseGameCharacter.h"
+#include "GameFramework/Character.h"
 
 #include "BaseGun.generated.h"
 
@@ -19,7 +20,8 @@ public:
 	ABaseGun();
 
 	UPROPERTY(EditAnyWhere, Category = "BaseGun")
-		float GunPerShootDamage;
+		float PerShootBaseDamage;
+
 
 	USkeletalMeshComponent* SkeletalMesh;
 	USceneComponent* FireMarkerContainer;
@@ -39,6 +41,4 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Base Gun")
 		void  SetCamera(UCameraComponent* NewCamera);
-
-
 };

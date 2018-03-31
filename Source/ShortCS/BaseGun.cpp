@@ -58,8 +58,9 @@ void ABaseGun::FireGun()
 	{
 		FString ActorName = RV_Hit.Actor->GetName();
 		if (RV_Hit.Actor->ActorHasTag("Player")) {
-			//Cast<ABaseGameCharacter>(RV_Hit.Actor)->TakeDamage(GunPerShootDamage);
-		};
+			ABaseGameCharacter* HitActorAsBaseGameCharacter = Cast<ABaseGameCharacter>(RV_Hit.Actor);
+			HitActorAsBaseGameCharacter->DamageBaseGameCharacter(PerShootBaseDamage);
+		}
 
 		GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Yellow, ActorName, true);
 	}
